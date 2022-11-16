@@ -8,18 +8,33 @@
 
 # ------------------2--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و مقسوم عليه هاي مشتركشان را نمايش دهد
-ls1, ls2 = [], []
-ln1 = list(map(int, input('Enter 2 number: ').split(',')))
-for i in range(1, ln1[0] + 1):
-    if ln1[0] % i == 0:
-        ls1.append(i)
-for i in range(1, ln1[1] + 1):
-    if ln1[1] % i == 0:
-        ls2.append(i)
-print(ln1[0], ls1, '\n', ln1[1], ls2, sep='')
-s1 = set(ls1).intersection(set(ls2))
-print(s1)
+# ls1, ls2 = [], []
+# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# for i in range(1, ln1[0] + 1):
+#     if ln1[0] % i == 0:
+#         ls1.append(i)
+# for i in range(1, ln1[1] + 1):
+#     if ln1[1] % i == 0:
+#         ls2.append(i)
+# print(ln1[0], ls1, '\n', ln1[1], ls2, sep='')
+# s1 = set(ls1).intersection(set(ls2))
+# print(s1)
 
 # ------------------3--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و بزرگترين مقسوم عليه مشتركشان را نمايش دهد
-print('MAX =', max(s1))
+# print('MAX =', max(s1))
+
+# ------------------4--------------------
+# برنامه اي بنويسيد كه دو عدد صحيح را گرفته و كوچكترين مضرب مشتركشان را نمايش دهد
+ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+i=1
+s1=set()
+s2=set()
+while True:
+    s1.add(ln1[0]*i)
+    s2.add(ln1[1]*i)
+    if s1.intersection(s2):
+        sha=s1.intersection(s2)
+        break
+    i+=1
+print(sha)
