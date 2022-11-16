@@ -5,3 +5,5 @@ for c in l:
 # Add a comment for testing Github
 print()
 print('*' * 10)
+
+# Add a comment for testing VCS from Github to Pycharm
