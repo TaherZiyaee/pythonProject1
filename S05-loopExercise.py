@@ -26,15 +26,23 @@
 
 # ------------------4--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و كوچكترين مضرب مشتركشان را نمايش دهد
-ln1 = list(map(int, input('Enter 2 number: ').split(',')))
-i=1
-s1=set()
-s2=set()
-while True:
-    s1.add(ln1[0]*i)
-    s2.add(ln1[1]*i)
-    if s1.intersection(s2):
-        sha=s1.intersection(s2)
-        break
-    i+=1
-print(sha)
+# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# i=1
+# s1=set()
+# s2=set()
+# while True:
+#     s1.add(ln1[0]*i)
+#     s2.add(ln1[1]*i)
+#     if s1.intersection(s2):
+#         sha=s1.intersection(s2)
+#         break
+#     i+=1
+# print(sha)
+
+# ------------------5--------------------
+
+# ------------------6--------------------
+# برنامه ای که تعداد سطر را از کاربر گرفته و شکل زیر را رسم کند
+n=int(input('Enter row#: '))
+for i in range(1,n+1):
+    print('*'*i)
