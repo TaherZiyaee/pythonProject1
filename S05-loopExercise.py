@@ -43,6 +43,29 @@
 
 # ------------------6--------------------
 # برنامه ای که تعداد سطر را از کاربر گرفته و شکل زیر را رسم کند
-n=int(input('Enter row#: '))
-for i in range(1,n+1):
-    print('*'*i)
+# n=int(input('Enter row#: '))
+# for i in range(1,n+1):
+#     print('*'*i)
+
+# ------------------6--------------------
+from random import choice
+
+familyTuple=('Ali', 'Taher', 'Mozhgan', 'Noyan', 'Mojtaba'
+          ,'Morteza','Mostafa','Tahmouress','Elahe','Avina')
+systemGuessTuple=set()
+print(familyTuple)
+i=1
+while i<=len(familyTuple):
+    name=choice(familyTuple)
+    if name in systemGuessTuple:
+        continue
+    systemGuessTuple.add(name)
+    print(f'{i}: {name}')
+    ans=input('Is it true? (y/n) ')
+    if ans.lower()=='y':
+        print('*'*5,'FINISH','*'*5)
+        print(f'{name} is the name.')
+        exit(0)
+    i+=1
+print('Are you kidding me!')
+exit(13)
