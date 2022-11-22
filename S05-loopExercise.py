@@ -8,8 +8,8 @@
 
 # ------------------2--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و مقسوم عليه هاي مشتركشان را نمايش دهد
-ls1, ls2 = [], []
-ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# ls1, ls2 = [], []
+# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
 # for i in range(1, ln1[0] + 1):
 #     if ln1[0] % i == 0:
 #         ls1.append(i)
@@ -19,10 +19,10 @@ ln1 = list(map(int, input('Enter 2 number: ').split(',')))
 # print(ln1[0], ls1, '\n', ln1[1], ls2, sep='')
 # s1 = set(ls1).intersection(set(ls2))
 # print(s1)
-#------------ Halate behineh --------------
-for i in range(1,min(ln1)+1):
-    if ln1[0] % i == 0 and ln1[1] % i == 0:
-        print(i,end=' ')
+# ------------ Halate behineh --------------
+# for i in range(1,min(ln1)+1):
+#     if ln1[0] % i == 0 and ln1[1] % i == 0:
+#         print(i,end=' ')
 
 # ------------------3--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و بزرگترين مقسوم عليه مشتركشان را نمايش دهد
@@ -44,12 +44,18 @@ for i in range(1,min(ln1)+1):
 # print(sha)
 
 # ------------------5--------------------
-
+# num=int(input('Enter a number: '))
+# i=0
+# while num>0:
+#     num //= 10
+#     i+=1
+# print(i)
 # ------------------6--------------------
 # برنامه ای که تعداد سطر را از کاربر گرفته و شکل زیر را رسم کند
-# n=int(input('Enter row#: '))
-# for i in range(1,n+1):
-#     print('*'*i)
+n = int(input('Enter row#: '))
+for i in range(1, n + 1):
+    print(' ' * (n - i), end='')
+    print('*' * i)
 
 # ------------------6--------------------
 # from random import choice
