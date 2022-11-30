@@ -58,22 +58,37 @@
 # print(f'Sum factorial {n}! = {sum_fact(n)}')
 # --------------------------------
 
+# def func(a, b, c):
+#     print('a =', a)
+#     print('b =', b)
+#     print('c =', c)
+#
+#
+# # normal
+# func(2, 3, 5)
+# # name = value
+# func(b=4, c=11, a=-3)
+# # normal + name = value
+# func(2, b=2, c=6)
+# # itrable - (str,list,tuple,set)
+# func(*[4, 8, 15])
+# x = [-3, 7, 17]
+# func(*x)
+# # **dict
+# d = {'a': 4, 'b': 12, 'c': 1}
+# func(**d)
+
+# --------------------------------
+# normal
 def func(a, b, c):
+# default value
+def func(a=3, b=-9, c=13):
+# # normal + name = value
+def func(a=3, b=-9, c=13):
+# *name
+def func(a, b, *c):
     print('a =', a)
     print('b =', b)
     print('c =', c)
 
-
-# normal
-func(2, 3, 5)
-# name = value
-func(b=4, c=11, a=-3)
-# normal + name = value
-func(2, b=2, c=6)
-# itrable - (str,list,tuple,set)
-func(*[4, 8, 15])
-x = [-3, 7, 17]
-func(*x)
-# **dict
-d = {'a': 4, 'b': 12, 'c': 1}
-func(**d)
+func(2, 3)
