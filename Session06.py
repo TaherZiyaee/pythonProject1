@@ -103,18 +103,33 @@
 # func1(4, 11, c=2)
 
 # --------------------------------
-def max3(a,b,c):
-    """Recive three numbers as input and return the maximum of them
+# def max3(a,b,c):
+#     """Recive three numbers as input and return the maximum of them
+#
+#     :parameter
+#         a (int): A decimal integer
+#         b (int): Another decimal integer
+#         c (int): Another decimal integer
+#
+#     :return
+#         max_int (int): Maximum of three numbers
+#     """
+#     return max(a,b,c)
+#
+# # print(max3.__doc__)
+# print(help(max3))
 
-    :parameter
-        a (int): A decimal integer
-        b (int): Another decimal integer
-        c (int): Another decimal integer
+# --------------------------------
+# def func2(x:int,y:int,z:int):
+#     print('x:',x)
+#     print('y:',y)
+#     print('z:',z)
+#
+# print(func2(2,5,'7'))
 
-    :return
-        max_int (int): Maximum of three numbers
-    """
-    return max(a,b,c)
+def funcSum(a: int = 4, b: int = 5, c: float = 32.4) -> tuple:
+    return a + b + c, a, b, c
 
-# print(max3.__doc__)
-print(help(max3))
+
+print(funcSum())
+print(funcSum.__annotations__)
