@@ -80,15 +80,41 @@
 
 # --------------------------------
 # normal
-def func(a, b, c):
-# default value
-def func(a=3, b=-9, c=13):
-# # normal + name = value
-def func(a=3, b=-9, c=13):
-# *name
-def func(a, b, *c):
-    print('a =', a)
-    print('b =', b)
-    print('c =', c)
+# def func(a, b, c):
+# # default value
+# def func(a=3, b=-9, c=13):
+# # # normal + name = value
+# def func(a=3, b=-9, c=13):
+# # *name
+# def func(a, b, *c):
+#     print('a =', a)
+#     print('b =', b)
+#     print('c =', c)
+#
+# func(2, 3)
 
-func(2, 3)
+# --------------------------------
+# def func1(a, b, /, c,d,*,e,f,g):
+# def func1(a, b, /, c):
+#     print('a=', a)
+#     print('c=', b)
+#     print('c=', c)
+#
+# func1(4, 11, c=2)
+
+# --------------------------------
+def max3(a,b,c):
+    """Recive three numbers as input and return the maximum of them
+
+    :parameter
+        a (int): A decimal integer
+        b (int): Another decimal integer
+        c (int): Another decimal integer
+
+    :return
+        max_int (int): Maximum of three numbers
+    """
+    return max(a,b,c)
+
+# print(max3.__doc__)
+print(help(max3))
