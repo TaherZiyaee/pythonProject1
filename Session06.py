@@ -9,6 +9,7 @@
 #
 # print(encryptor_('taher zia'))
 # --------------------------------
+import math
 
 # def f(x):
 #     return 2*x+1
@@ -103,18 +104,34 @@
 # func1(4, 11, c=2)
 
 # --------------------------------
-def max3(a,b,c):
-    """Recive three numbers as input and return the maximum of them
+# def max3(a,b,c):
+#     """Recive three numbers as input and return the maximum of them
+#
+#     :parameter
+#         a (int): A decimal integer
+#         b (int): Another decimal integer
+#         c (int): Another decimal integer
+#
+#     :return
+#         max_int (int): Maximum of three numbers
+#     """
+#     return max(a,b,c)
+#
+# # print(max3.__doc__)
+# print(help(max3))
 
-    :parameter
-        a (int): A decimal integer
-        b (int): Another decimal integer
-        c (int): Another decimal integer
-
-    :return
-        max_int (int): Maximum of three numbers
-    """
-    return max(a,b,c)
-
-# print(max3.__doc__)
-print(help(max3))
+# --------------------------------
+# print(dir(math))
+# --------------------------------
+x = 1
+def D():
+    x=11
+    def A():
+        nonlocal x
+        def B():
+            nonlocal x
+            x += 5
+            print(x)
+        B()
+    A()
+D()
