@@ -103,18 +103,28 @@
 # func1(4, 11, c=2)
 
 # --------------------------------
-def max3(a,b,c):
-    """Recive three numbers as input and return the maximum of them
+# def max3(a,b,c):
+#     """Recive three numbers as input and return the maximum of them
+#
+#     :parameter
+#         a (int): A decimal integer
+#         b (int): Another decimal integer
+#         c (int): Another decimal integer
+#
+#     :return
+#         max_int (int): Maximum of three numbers
+#     """
+#     return max(a,b,c)
+#
+# # print(max3.__doc__)
+# print(help(max3))
 
-    :parameter
-        a (int): A decimal integer
-        b (int): Another decimal integer
-        c (int): Another decimal integer
+# --------------------------------
 
-    :return
-        max_int (int): Maximum of three numbers
-    """
-    return max(a,b,c)
-
-# print(max3.__doc__)
-print(help(max3))
+def func(a):
+    a+=1
+    print(a)
+    return a
+a=1
+a=func(a)
+print(a)
