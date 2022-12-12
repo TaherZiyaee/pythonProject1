@@ -24,17 +24,17 @@
 #     pass
 # --------------------------------
 
-# def repeat(entry, digit):
+# def repeat(number, digit):
 #     i=0
-#     while entry>0:
-#         if entry%10==digit:
+#     while number>0:
+#         if number%10==digit:
 #             i+=1
-#         entry//=10
+#         number//=10
 #     return i
 #
-# entry=int(input('Enter a entry: '))
+# number=int(input('Enter a number: '))
 # digit=int(input('Enter a digit: '))
-# print(digit,'is repeated',repeat(entry,digit),'time(s).')
+# print(digit,'is repeated',repeat(number,digit),'time(s).')
 
 # --------------------------------
 # Problem? 1! + 2! + 3! + ... n!
@@ -54,7 +54,7 @@
 #     return s
 #
 #
-# n = int(input('Enter fact entry: '))
+# n = int(input('Enter fact number: '))
 # print(f'Sum factorial {n}! = {sum_fact(n)}')
 # --------------------------------
 
@@ -120,11 +120,42 @@
 # print(help(max3))
 
 # --------------------------------
+# def func2(x:int,y:int,z:int):
+#     print('x:',x)
+#     print('y:',y)
+#     print('z:',z)
+#
+# print(func2(2,5,'7'))
 
-def func(a):
-    a+=1
-    print(a)
-    return a
-a=1
-a=func(a)
-print(a)
+# def funcSum(a: int = 4, b: int = 5, c: float = 32.4) -> tuple:
+#     return a + b + c, a, b, c
+#
+#
+# print(funcSum())
+# print(funcSum.__annotations__)
+
+# --------------------------------
+
+def mysort(s):
+
+    def ascending(x):
+        print(sorted(x,reverse=True))
+
+    def descanding(x):
+        print(sorted(x))
+
+    def myError(z):
+        print('Error!',z)
+
+    if s == 'a':
+        return ascending
+    elif s == 'd':
+        return descanding
+    else:
+        return myError
+
+action=input('Enter your choice: ')
+# action = a
+func=mysort(action)  # func = ascending
+mytuple=(2,4,6,1,-4,7,11,6,0,9,-2)
+func(mytuple)
