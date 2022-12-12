@@ -24,17 +24,17 @@
 #     pass
 # --------------------------------
 
-# def repeat(number, digit):
+# def repeat(entry, digit):
 #     i=0
-#     while number>0:
-#         if number%10==digit:
+#     while entry>0:
+#         if entry%10==digit:
 #             i+=1
-#         number//=10
+#         entry//=10
 #     return i
 #
-# number=int(input('Enter a number: '))
+# entry=int(input('Enter a entry: '))
 # digit=int(input('Enter a digit: '))
-# print(digit,'is repeated',repeat(number,digit),'time(s).')
+# print(digit,'is repeated',repeat(entry,digit),'time(s).')
 
 # --------------------------------
 # Problem? 1! + 2! + 3! + ... n!
@@ -54,7 +54,7 @@
 #     return s
 #
 #
-# n = int(input('Enter fact number: '))
+# n = int(input('Enter fact entry: '))
 # print(f'Sum factorial {n}! = {sum_fact(n)}')
 # --------------------------------
 
@@ -120,16 +120,11 @@
 # print(help(max3))
 
 # --------------------------------
-# def func2(x:int,y:int,z:int):
-#     print('x:',x)
-#     print('y:',y)
-#     print('z:',z)
-#
-# print(func2(2,5,'7'))
 
-def funcSum(a: int = 4, b: int = 5, c: float = 32.4) -> tuple:
-    return a + b + c, a, b, c
-
-
-print(funcSum())
-print(funcSum.__annotations__)
+def func(a):
+    a+=1
+    print(a)
+    return a
+a=1
+a=func(a)
+print(a)

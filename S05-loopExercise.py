@@ -1,7 +1,7 @@
 # ------------------1--------------------
 # Print numbers between 2 numbers
 # برنامه اي بنويسيد كه دو عدد را از كاربر گرفته و اعداد مابين آن ها را نمايش دهد
-# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# ln1 = list(map(int, input('Enter 2 entry: ').split(',')))
 # print(ln1)
 # for i in range(min(ln1)+1, max(ln1)):
 #     print(i, end=' ')
@@ -9,7 +9,7 @@
 # ------------------2--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و مقسوم عليه هاي مشتركشان را نمايش دهد
 # ls1, ls2 = [], []
-# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# ln1 = list(map(int, input('Enter 2 entry: ').split(',')))
 # for i in range(1, ln1[0] + 1):
 #     if ln1[0] % i == 0:
 #         ls1.append(i)
@@ -30,7 +30,7 @@
 
 # ------------------4--------------------
 # برنامه اي بنويسيد كه دو عدد صحيح را گرفته و كوچكترين مضرب مشتركشان را نمايش دهد
-# ln1 = list(map(int, input('Enter 2 number: ').split(',')))
+# ln1 = list(map(int, input('Enter 2 entry: ').split(',')))
 # i=1
 # s1=set()
 # s2=set()
@@ -44,7 +44,7 @@
 # print(sha)
 
 # ------------------5--------------------
-# num=int(input('Enter a number: '))
+# num=int(input('Enter a entry: '))
 # i=0
 # while num>0:
 #     num //= 10
