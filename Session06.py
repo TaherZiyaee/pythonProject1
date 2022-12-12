@@ -24,17 +24,17 @@
 #     pass
 # --------------------------------
 
-# def repeat(number, digit):
+# def repeat(entry, digit):
 #     i=0
-#     while number>0:
-#         if number%10==digit:
+#     while entry>0:
+#         if entry%10==digit:
 #             i+=1
-#         number//=10
+#         entry//=10
 #     return i
 #
-# number=int(input('Enter a number: '))
+# entry=int(input('Enter a entry: '))
 # digit=int(input('Enter a digit: '))
-# print(digit,'is repeated',repeat(number,digit),'time(s).')
+# print(digit,'is repeated',repeat(entry,digit),'time(s).')
 
 # --------------------------------
 # Problem? 1! + 2! + 3! + ... n!
@@ -54,7 +54,7 @@
 #     return s
 #
 #
-# n = int(input('Enter fact number: '))
+# n = int(input('Enter fact entry: '))
 # print(f'Sum factorial {n}! = {sum_fact(n)}')
 # --------------------------------
 
