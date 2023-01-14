@@ -4,6 +4,7 @@ board = list(range(1, 10))
 # board = [1, 2, "X", 4, 5, 6, "O", 8, 9]
 player, computer = "X", "O"
 winners = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+moves = ((1, 3, 7, 9), (5,), (2, 4, 6, 8))
 
 # Player: X
 # Computer: O
@@ -31,11 +32,13 @@ def print_board():
 def has_empty_space():
     return board.count("X") + board.count("O") != 9
 
+
 def can_move(brd, mve):
     # in shart barrasi mikonad ke agar meghdare vared shode beyne 1-9 bashad & adad bashad(yani ghabele harkat bashad)
     if mve in range(1, 10) and isinstance(brd[mve - 1], int):
         return True
     return False
+
 
 def make_move(brd, plyr, mve, undo=False):
     if can_move(brd, mve):
@@ -44,7 +47,7 @@ def make_move(brd, plyr, mve, undo=False):
         if undo:
             brd[mve - 1] = mve
         return True, win
-    return False,False
+    return False, False
 
 
 def is_winner(brd, plyr):
@@ -60,7 +63,27 @@ def is_winner(brd, plyr):
     return win
 
 
-
+def computer_move():
+    mv = -1
+    # aya khode computer mitavanad barande shavad?
+    for i in range(1, 10):
+        if make_move(board, computer, i, True)[1]:
+            mv = i
+            break
+    # agar player mitavanad barande shavad jeloye oo ra begirad
+    if mv == -1:
+        for j in range(1, 10):
+            if make_move(board, player, j, True)[1]:
+                mv = j
+                break
+    if mv == -1:
+        for tup in moves:
+            for m in tup:
+                if can_move(board, m):
+                    mv = m
+                    break
+            break
+    return make_move(board,computer,mv)
 
 
 # print_board()
@@ -72,6 +95,10 @@ while has_empty_space():
         print("Invalid number! Please try again...")
         continue
     if won:
-        print(Fore.GREEN+"Congratulation, You won!"+Fore.RESET)
-        print_board()
+        print(Fore.GREEN + "Congratulation, You win!" + Fore.RESET)
         break
+    elif computer_move()[1]:
+        print(Fore.YELLOW+"Sorry, You lose!"+Fore.RESET)
+        break
+
+print_board()
