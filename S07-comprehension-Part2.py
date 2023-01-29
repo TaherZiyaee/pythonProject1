@@ -13,3 +13,8 @@
 # print(x)
 
 print(chr(6528))
+
+name="taher"
+print(name[0])
+
+print("\U0001300A")
