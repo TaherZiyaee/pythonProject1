@@ -4,3 +4,9 @@ def func3(n: int):
 
 def func4(s: str):
     print(s.lower())
+
+print(__name__)
+if __name__ == "__main__":
+    func3(3)
+    func4("SHAYAN")
+    print("END")
