@@ -1,2 +1,4 @@
 Looking for work or have a Python related position that you're trying to hire for?
 Our relaunched community-run job board is the place to go.
+Here's a short example of extracting individual characters from a UTF-8 encoded byte string.
+As I mention in the comments, to do this correctly you need to know how many bytes each of the characters is encoded as.
