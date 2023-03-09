@@ -1,0 +1,6 @@
+f = open("note10.txt", "rb")
+print(f.tell())
+print(f.read(17))
+f.seek(-3, 2)
+print(f.tell())
+print(f.read(5))

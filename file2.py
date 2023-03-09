@@ -12,5 +12,21 @@
 # input("Continue...")
 # f.close()
 
-import io
-print(io.DEFAULT_BUFFER_SIZE)
+# import io
+# print(io.DEFAULT_BUFFER_SIZE)
+
+# f = open("note10.txt", "r", encoding="utf-8")
+# print(f.tell())
+# print(f.readline(), end="")
+# print(f.tell())
+# print(f.readline(), end="")
+
+# f = open("note1.txt", "w", encoding="utf-8")
+# print(f.tell())
+# f.write("ည")
+# print(f.tell())
+# print(bytes("ည", "utf-8"))
+
+
+import os
+print(repr(os.linesep))
