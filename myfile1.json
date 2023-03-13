@@ -1,0 +1,23 @@
+{
+    "age":37,
+    "family":"Ziaei",
+    "lessons":[
+        "math",
+        "physic",
+        "sport",
+        "english language"
+    ],
+    "marks":{
+        "math":[
+            17,
+            20,
+            19
+        ],
+        "physic":[
+            12,
+            18,
+            9
+        ]
+    },
+    "name":"Taher"
+}
